@@ -72,11 +72,8 @@ function CreateTicket() {
 
   return (
     <div className="container py-5">
-
       <div className="text-center mb-5">
-        <h1 className="fw-bold">
-          TradeNest Help Center
-        </h1>
+        <h1 className="fw-bold">TradeNest Help Center</h1>
 
         <p
           className="mt-3"
@@ -87,35 +84,24 @@ function CreateTicket() {
       </div>
 
       <div className="row">
-
         {supportTopics.map((topic, index) => (
-
           <div className="col-lg-4 col-md-6 mb-4" key={index}>
-
             <div className="support-card p-4 h-100">
-
-              <h4 className="mb-4">
-                📌 {topic.title}
-              </h4>
+              <h4 className="mb-4">📌 {topic.title}</h4>
 
               {topic.links.map((item, i) => (
-                <a
+                <button
                   key={i}
-                  href="#"
-                  className="d-block mb-3 text-decoration-none"
+                  type="button"
+                  className="btn btn-link d-block text-start p-0 mb-3 text-decoration-none"
                 >
                   {item}
-                </a>
+                </button>
               ))}
-
             </div>
-
           </div>
-
         ))}
-
       </div>
-
     </div>
   );
 }

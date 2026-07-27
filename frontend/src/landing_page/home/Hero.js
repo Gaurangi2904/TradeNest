@@ -3,14 +3,13 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import MarketTicker from "./MarketTicker";
 import StockCards from "./StockCards";
-import PortfolioChart from "./PortfolioChart";
 
 function Hero() {
   return (
     <section className="hero-section py-5">
       <div className="container text-center">
-         
-           <MarketTicker />
+
+        <MarketTicker />
 
         {/* Hero Image */}
         <motion.img
@@ -79,10 +78,7 @@ function Hero() {
             duration: 0.8,
           }}
         >
-          <Link
-            to="/signup"
-            style={{ textDecoration: "none" }}
-          >
+          <Link to="/signup" style={{ textDecoration: "none" }}>
             <button className="btn btn-primary hero-btn me-3">
               🚀 Get Started
             </button>
@@ -124,8 +120,9 @@ function Hero() {
             </div>
           </div>
         </motion.div>
-         <StockCards />
-         
+
+        <StockCards />
+
       </div>
     </section>
   );
