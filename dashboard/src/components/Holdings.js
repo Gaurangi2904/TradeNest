@@ -18,7 +18,7 @@ const Holdings = () => {
     const fetchHoldings = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:3002/allHoldings"
+          "https://tradenest-0cbw.onrender.com/allHoldings"
         );
         setAllHoldings(res.data);
       } catch (err) {

@@ -27,7 +27,7 @@ const BuyActionWindow = ({ uid }) => {
     try {
       setLoading(true);
 
-      await axios.post("http://localhost:3002/newOrder", {
+      await axios.post("https://tradenest-0cbw.onrender.com/newOrder", {
         name: uid,
         qty: Number(stockQuantity),
         price: Number(stockPrice),
