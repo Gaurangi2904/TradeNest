@@ -1,0 +1,302 @@
+/* ===========================
+   SUMMARY PAGE
+=========================== */
+
+.summary-page {
+  width: 100%;
+  padding: 30px;
+  background: #f8fafc;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 55px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+  color: white;
+  margin-bottom: 35px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-tag {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #bfdbfe;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.hero-left h1 {
+  font-size: 46px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  max-width: 650px;
+  color: #dbeafe;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.hero-buttons {
+  margin-top: 35px;
+  display: flex;
+  gap: 15px;
+}
+
+.primary-btn {
+  background: white;
+  color: #2563eb;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 14px 28px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.secondary-btn:hover {
+  background: white;
+  color: #2563eb;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.health-card {
+  width: 290px;
+  background: white;
+  color: #111827;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+}
+
+.health-card h1 {
+  font-size: 60px;
+  color: #22c55e;
+  margin: 15px 0;
+}
+
+.health-card hr {
+  margin: 20px 0;
+}
+
+.health-badge {
+  display: inline-block;
+  background: #22c55e;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+/* ===========================
+   KPI CARDS
+=========================== */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.stat-card {
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+}
+
+.stat-card h6 {
+  margin-top: 25px;
+  color: inherit;
+  opacity: .85;
+}
+
+.stat-card h2 {
+  margin: 12px 0;
+  font-size: 34px;
+}
+
+.stat-card small {
+  font-size: 14px;
+}
+
+.stat-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* ===========================
+   COMMON CARD
+=========================== */
+
+.dashboard-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+  transition: .3s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}
+
+.chart-card {
+  padding: 30px;
+  margin-bottom: 35px;
+}
+
+.card-box {
+  padding: 30px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.section-header h3 {
+  margin: 0;
+}
+
+.growth-badge {
+  background: #22c55e;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+/* ===========================
+   BOTTOM GRID
+=========================== */
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+/* ===========================
+   WATCHLIST TABLE
+=========================== */
+
+.watch-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.watch-table th {
+  text-align: left;
+  padding: 14px;
+  color: #64748b;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.watch-table td {
+  padding: 16px 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.watch-table tr:hover {
+  background: #f8fafc;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+button {
+  font-family: inherit;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:1200px){
+
+.stats-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero-section{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-buttons{
+justify-content:center;
+}
+
+.bottom-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media (max-width:768px){
+
+.summary-page{
+padding:20px;
+}
+
+.hero-section{
+padding:35px 25px;
+}
+
+.hero-left h1{
+font-size:34px;
+}
+
+.stats-grid{
+grid-template-columns:1fr;
+}
+
+.watch-table{
+font-size:14px;
+}
+
+.primary-btn,
+.secondary-btn{
+width:100%;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+}

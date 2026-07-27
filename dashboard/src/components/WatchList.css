@@ -1,0 +1,298 @@
+/* ==============================
+   WATCHLIST CONTAINER
+================================= */
+
+.watchlist-container{
+    width:100%;
+    height:100%;
+    background:#ffffff;
+    border-right:1px solid #e5e7eb;
+    display:flex;
+    flex-direction:column;
+}
+
+/* ==============================
+   SEARCH BAR
+================================= */
+
+.search-container{
+    padding:20px;
+    border-bottom:1px solid #edf2f7;
+}
+
+.search-box{
+    display:flex;
+    align-items:center;
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    border-radius:12px;
+    padding:10px 14px;
+    transition:.3s;
+}
+
+.search-box:hover{
+    border-color:#2563eb;
+}
+
+.search-box:focus-within{
+    border-color:#2563eb;
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
+
+.search{
+    border:none;
+    outline:none;
+    background:transparent;
+    width:100%;
+    margin-left:10px;
+    font-size:15px;
+    color:#111827;
+}
+
+.search::placeholder{
+    color:#94a3b8;
+}
+
+.counts{
+    display:block;
+    margin-top:10px;
+    text-align:right;
+    font-size:13px;
+    color:#64748b;
+}
+
+/* ==============================
+   WATCHLIST
+================================= */
+
+.list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    overflow-y:auto;
+    flex:1;
+}
+
+/* Scrollbar */
+
+.list::-webkit-scrollbar{
+    width:6px;
+}
+
+.list::-webkit-scrollbar-thumb{
+    background:#d1d5db;
+    border-radius:20px;
+}
+
+/* ==============================
+   STOCK ITEM
+================================= */
+
+.list li{
+    position:relative;
+    border-bottom:1px solid #f1f5f9;
+    transition:.25s;
+}
+
+.list li:hover{
+    background:#f8fbff;
+}
+
+.item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 18px;
+}
+
+.stock-icon{
+    width:42px;
+    height:42px;
+    border-radius:12px;
+    background:#eff6ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.item p{
+    margin:0;
+    font-weight:600;
+    font-size:15px;
+}
+
+.item small{
+    font-size:12px;
+}
+
+/* ==============================
+   MARKET STATUS
+================================= */
+
+.market-open{
+    background:#dcfce7;
+    color:#16a34a;
+    padding:2px 8px;
+    border-radius:20px;
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:.5px;
+}
+
+/* ==============================
+   PRICE
+================================= */
+
+.itemInfo{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.price{
+    font-weight:700;
+    color:#111827;
+    font-size:15px;
+}
+
+/* ==============================
+   PROFIT LOSS COLORS
+================================= */
+
+.up{
+    color:#16a34a;
+}
+
+.down{
+    color:#ef4444;
+}
+
+.percent{
+    font-size:13px;
+    font-weight:600;
+}
+
+/* ==============================
+   ACTION BUTTONS
+================================= */
+
+.actions{
+    display:flex;
+    justify-content:center;
+    padding-bottom:16px;
+    animation:fadeIn .25s ease;
+}
+
+.actions span{
+    display:flex;
+    gap:10px;
+}
+
+.buy,
+.sell{
+    border:none;
+    color:white;
+    padding:7px 18px;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    font-size:13px;
+}
+
+.buy{
+    background:#2563eb;
+}
+
+.buy:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+.sell{
+    background:#ef4444;
+}
+
+.sell:hover{
+    background:#dc2626;
+    transform:translateY(-2px);
+}
+
+.action{
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:10px;
+    background:#f1f5f9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.action:hover{
+    background:#2563eb;
+    color:white;
+}
+
+.icon{
+    font-size:20px !important;
+}
+
+/* ==============================
+   CHART
+================================= */
+
+.watchlist-chart{
+    padding:20px;
+    border-top:1px solid #e5e7eb;
+}
+
+/* ==============================
+   ANIMATION
+================================= */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(8px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ==============================
+   RESPONSIVE
+================================= */
+
+@media(max-width:992px){
+
+    .watchlist-container{
+        border-right:none;
+        border-bottom:1px solid #e5e7eb;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .item{
+        padding:14px;
+    }
+
+    .price{
+        font-size:14px;
+    }
+
+    .buy,
+    .sell{
+        padding:6px 14px;
+    }
+
+}
