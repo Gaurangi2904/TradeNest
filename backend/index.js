@@ -20,8 +20,10 @@ const app = express();
 app.use(
   cors({
     origin: [
+       "https://trade-nest-n7ts5o6x4-gaurangi-vijay-kapares-projects.vercel.app",
+      "https://trade-nest-dashboard-f6k8txs1f-gaurangi-vijay-kapares-projects.vercel.app",
       "http://localhost:3000",
-      "https://trade-nest-n7ts5o6x4-gaurangi-vijay-kapares-projects.vercel.app",
+
       // Add your dashboard Vercel URL here after it is deployed
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
